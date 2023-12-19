@@ -4,6 +4,12 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 const loadingElement = document.querySelector("#loading");
 const postsContainer = document.querySelector("#posts-container");
 
+// Get id from URL para diferenciar a pagina
+// urlSearchParams: Salva a url
+const urlSearchParams = new URLSearchParams(window.location.search)
+// Verifica se a url tem id e salva o id no postId
+const postId = urlSearchParams.get("id");
+
 // Get all posts
 async function getAllPosts () {
   const response = await fetch(url);
@@ -13,7 +19,7 @@ async function getAllPosts () {
   
   console.log(data)
 
-  // esconder A frase  carregando... da pagina index
+  // Esconder A frase  carregando... da pagina index
   loadingElement.classList.add("hide");
 
   // Criando elementos para cada post individual
@@ -24,7 +30,7 @@ async function getAllPosts () {
     const link = document.createElement("a");
 
     // Preencher elementos criados
-  title.innerText =  post.title;
+    title.innerText =  post.title;
     body.innerText = post.body;
     link.innerText = "Ler";
     link.setAttribute("href", `/post-individual.html?id=${post.id}`)
@@ -39,4 +45,11 @@ async function getAllPosts () {
   });
 
 }
-getAllPosts()
+// Executar a função getAllPosts() só na pagina do blog
+if(!postId) {
+  // se nao tiver id na url 
+  getAllPosts()
+}else {
+  // se tiver id na url
+  console.log(postId)
+}
