@@ -1,8 +1,13 @@
-// Carregamento dos posts da home
 const url = "https://jsonplaceholder.typicode.com/posts";
-
+// Para posts, agina Home
 const loadingElement = document.querySelector("#loading");
 const postsContainer = document.querySelector("#posts-container");
+
+// Para um post só, pagina post-individual
+const postPage = document.querySelector("#post");
+const postContainer = document.querySelector("#postContainer");
+const commentsContainer = document.querySelector("#comments-container")
+
 
 // Get id from URL para diferenciar a pagina
 // urlSearchParams: Salva a url
@@ -45,11 +50,29 @@ async function getAllPosts () {
   });
 
 }
+//  Get individual post
+async function getPost(id) {
+  // Duas requisições assincronas
+  const [responsePost, responseComments] = await Promise.all([
+    fetch (`${url}/id`),
+    fetch (`${url}/id/comments`)
+  ])
+
+  const dataPost = await responsePost.json();
+  const dataComments = responseComments.json();
+}
+
+
+
+
+
+
+
 // Executar a função getAllPosts() só na pagina do blog
 if(!postId) {
   // se nao tiver id na url 
   getAllPosts()
 }else {
   // se tiver id na url
-  console.log(postId)
+  console.log("postId", postId)
 }
