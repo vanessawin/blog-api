@@ -6,14 +6,16 @@ Esse projeto tem o intuito de aprimorar minhas habilidades em APi fech(js)
 
 ### Conteúdo do blog
 
-**Home:** Contém comentários de usuários (esses dados são carregados da api).
+**Home:** Contém Posts (esses dados são carregados da api).
 
-Cada comentário tem um botão que leva para a pagina do comentário individual.
+Cada post tem um botão que leva para a página do post-individual.
 
 ![home blog](/img/posts-home.png)
 
 
-**Pagina de comentário individual:** Carrega o comentario individual e com formulário para inserir novos comentarios de usuarios na api. 
+**Pagina de post individual:** Carrega o post individual , comentarios do post, e com formulário para inserir novos comentarios na api. 
+
+![Pagina post-individual](/img/post-individual.png)
 
 ## 🚀 Sobre o curso
 ## 🔗 Links
