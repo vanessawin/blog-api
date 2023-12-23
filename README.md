@@ -2,7 +2,7 @@
 # Mini blog
 
 
-Esse projeto tem o intuito de aprimorar minhas habilidades em APi fech(js)
+Esse projeto tem o intuito de aprimorar minhas habilidades em APi fech(js)utilizando metodos get/post 
 
 ### Conteúdo do blog
 
@@ -13,7 +13,7 @@ Cada post tem um botão que leva para a página do post-individual.
 ![home blog](/img/posts-home.png)
 
 
-**Pagina de post individual:** Carrega o post individual , comentarios do post, e com formulário para inserir novos comentarios na api. 
+**Pagina de post individual:** Carrega o post individual , comentarios do post, e com formulário para inserir novos comentarios na api e ao mesmo tempo carregando os comentarios antigos e novos de cada post na pagina. 
 
 ![Pagina post-individual](/img/post-individual.png)
 
@@ -27,4 +27,4 @@ Professor Matheus Batistini
 
 [Link Api](https://jsonplaceholder.typicode.com/posts).
 
-36:00
+
