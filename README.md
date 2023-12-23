@@ -25,6 +25,6 @@ Professor Matheus Batistini
 
 [Link do curso](https://www.youtube.com/watch?v=qIGYM4S8x50)
 
-[Link Api](https://jsonplaceholder.typicode.com/posts).
+[Link Api](https://jsonplaceholder.typicode.com/posts)
 
 
